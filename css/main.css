@@ -1,42 +1,53 @@
 body {
     margin: 0 auto;
+    color: yellow;;
+}
+
+h1 {
+    text-align: center;
 }
 
 section {
-    width: 400px;
+    margin-top: 200px;
+    margin-left: 400px;
+    width: 600px;
     height: 400px;
-    background-color:black;
+    color:black;
+    border: black;
+    background-color: rgb(244 244 247);
+    border-top-style: solid;
+    border-bottom-style: solid; 128 186 247
 }
 
 #P1 {
-    margin-top: 160px;
+    margin-top: 360px;
     height: 80px;
     width: 10px;
-    background-color: wheat;
+    background-color: rgb(192, 164,220);
     position: absolute;
 }
 
 #P2 {
-    margin-top: 160px;
-    margin-left: 390px;
+    margin-top: 360px;
+    margin-left: 590px;
     height: 80px;
     width: 10px;
-    background-color: wheat;
+    background-color: rgb(192, 164,220);
     position: absolute;
 }
 
 #Ball {
-    margin-top: 195px;
-    margin-left: 195px; 
+    margin-top: 395px;
+    margin-left: 700px; 
     height: 10px;
     width: 10px;
-    background-color: wheat;
+    background-color: rgb(121, 221, 184);
     border-radius: 50%;
     position: absolute;
 }
 
 score {
-    color: wheat;
+    color: rgb(128, 186, 247);
     display: flex;
     justify-content: space-around;
     font-size: 20px;
@@ -47,7 +58,7 @@ score {
 winner {
     display: flex;
     justify-content: center;
-    color: wheat;
+    color: black;
 }
 
 #Score {

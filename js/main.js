@@ -9,14 +9,14 @@ let p1DownPressed=false
 let p2UpPressed=false
 let p2DownPressed=false
 let bPressed=false
-let vertBallMove=[1,-1]
-let horiBallMove=[1,1]
+let vertBallMove=[1.1,-1]
+let horiBallMove=[1.1,1]
 let vertMove = 0;
 let horiMove = 0;
 
 /*----- cached element references -----*/ 
 var boardLength  = 400
-var boardWidth = 400
+var boardWidth = 600
 var paddleLength = 80
 var paddleWidth = 10
 var ballDiameter = 10
@@ -34,8 +34,8 @@ vertp1Pos = document.querySelector("#P1").style.top = 0;
 horip1Pos = document.querySelector("#P1").style.left = 5;
 vertp2Pos = document.querySelector("#P2").style.top = 0;
 horip2Pos = document.querySelector("#P2").style.left = 395;
-vertBallPos = document.querySelector("#Ball").style.top = 0;
-horiBallPos = document.querySelector("#Ball").style.left = 0;
+vertBallPos = document.querySelector("#Ball").style.top= 0;
+horiBallPos = document.querySelector("#Ball").style.left= 0;
 
 /*----- event listeners -----*/ 
 
@@ -55,14 +55,14 @@ function draw () {
 
 function checkWin() {
     if (s2.length===3) {
-        winner.innerHTML = 'Player 2 Won! Press B To Play Again'
+        winner.innerHTML = 'player 2 won! press b to play again'
         s1 = []
         s2 = []
         score2.innerHTML=s2.length
         score1.innerHTML=s1.length
     }
     if (s1.length===3) {
-        winner.innerHTML = 'Player 1 Won! Press B To Play Again'
+        winner.innerHTML = 'player 1 won! press b to play again'
         s1 = []
         s2 = []
         score2.innerHTML=s2.length
@@ -102,23 +102,27 @@ function drawBall() {
             horiBallPos = ball.style.left
         }
     // If ball hits the right paddle, bounce it back
-        if ((parseInt(ball.style.left) === (boardLength/2 - ballDiameter/2)) 
+        if ((parseInt(ball.style.left) === (boardWidth/2 - ballDiameter)) 
         && (parseInt(ball.style.top)>=(parseInt(p2.style.top)-(paddleLength/2)))
         && (parseInt(ball.style.top)<=(parseInt(p2.style.top)+(paddleLength/2)))
         ) {            
-            horiBallMove[0] = horiBallMove[0]*-1.02
+            horiBallMove[0] = horiBallMove[0]*-1.04
+            vertBalLMove[0] = vertBallMove[0]*1.04
             horiMove = horiBallMove[0]
+            vertMove = vertBallMove[0]
             ball.style.left = (parseInt(ball.style.left) + horiMove + "px")
             vertBallPos = ball.style.top
             horiBallPos = ball.style.left
         }
     // If ball hits the left paddle, bounce it back
-        if ((parseInt(ball.style.left) === -1*(boardLength/2 - ballDiameter/2)) 
+        if ((parseInt(ball.style.left) === -1*(boardWidth/2 - ballDiameter/2)) 
         && (parseInt(ball.style.top)<=(parseInt(p1.style.top)+(paddleLength/2)))
         && (parseInt(ball.style.top)>=(parseInt(p1.style.top)-(paddleLength/2)))
         ) {
-            horiBallMove[0] = horiBallMove[0]*-1
+            horiBallMove[0] = horiBallMove[0]*-1.04
+            vertBalLMove[0] = vertBallMove[0]*1.04
             horiMove = horiBallMove[0]
+            vertMove = vertBallMove[0]
             ball.style.left = (parseInt(ball.style.left) + horiMove + "px")
             vertBallPos = ball.style.top
             horiBallPos = ball.style.left
@@ -149,16 +153,16 @@ function drawPaddles() {
         p1.style.top = (parseInt(p1.style.top) - 2 + "px")
         vertp1Pos = p1.style.top
     }
-    if (p1UpPressed==='true' && parseInt(p1.style.top)===-(boardLength/2 -paddleLength/2)) {
-        p1.style.top = "-160"
+    if (p1UpPressed==='true' && parseInt(p1.style.top)=== 2+-(boardLength/2 -paddleLength/2)) {
+        p1.style.top = "-160px"
         vertp1Pos = p1.style.top
     }
-    if (p1DownPressed==='true' && parseInt(p1.style.top)<=(boardLength/2 -paddleLength/2)) {
+    if (p1DownPressed==='true' && parseInt(p1.style.top)<= +(boardLength/2 -paddleLength/2)) {
         p1.style.top = (parseInt(p1.style.top) + 2 +"px")
         vertp1Pos = p1.style.top
     }
-    if (p1DownPressed==='true' && parseInt(p1.style.top)>=(boardLength/2 -paddleLength/2)) {
-        p1.style.top = "160px"
+    if (p1DownPressed==='true' && parseInt(p1.style.top)>= 4+(boardLength/2 -paddleLength/2)) {
+        p1.style.top = "166px"
         vertp1Pos = p1.style.top
     }
     if (p2UpPressed==='true' && parseInt(p2.style.top)>=-(boardLength/2 -paddleLength/2)) {
@@ -174,7 +178,7 @@ function drawPaddles() {
         vertp2Pos = p2.style.top
     }
     if (p2DownPressed==='true' && parseInt(p2.style.top)>=(boardLength/2 -paddleLength/2)) {
-        p2.style.top = "160px"
+        p2.style.top = "162px"
         vertp2Pos = p2.style.top
     }
 }
