@@ -9,4 +9,4 @@ I originally wrote this game in canvas, but decided to give it a try using only 
 In terms of next steps, I'd like to figure out a better random generation for initial ball position and speed, and possibly add in two more players (top and bottom of screen) which could make the game four player.
 
 ![Image of Pong]
-(https://github.com/vooncer17/GameProject/blob/master/Screen%20Shot%202019-02-07%20at%205.36.46%20PM.png)
+<img src=https://github.com/vooncer17/GameProject/blob/master/Screen%20Shot%202019-02-07%20at%205.36.46%20PM.png)> 
