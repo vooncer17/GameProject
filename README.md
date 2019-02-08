@@ -7,3 +7,4 @@ The game was originally manufactured by Atari, which released it in 1972. Allan 
 I originally wrote this game in canvas, but decided to give it a try using only JS, HTML and CSS. While much more difficult, I felt I learned a lot, and got a good understanding of the positioning of HTML and DOM elements.
 
 In terms of next steps, I'd like to figure out a better random generation for initial ball position and speed, and possibly add in two more players (top and bottom of screen) which could make the game four player.
+
