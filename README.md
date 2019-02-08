@@ -9,5 +9,5 @@ I originally wrote this game in canvas, but decided to give it a try using only 
 In terms of next steps, I'd like to figure out a better random generation for initial ball position and speed, and possibly add in two more players (top and bottom of screen) which could make the game four player.
 
 <p align="center">
-<img src="pong.png" width="400" length="400" style="margin:0 auto;">
+<img src="pong.png" width="500" length="500" style="margin:0 auto;">
 </p>
