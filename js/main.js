@@ -161,7 +161,7 @@ function drawPaddles() {
         p1.style.top = (parseInt(p1.style.top) + 2 +"px")
         vertp1Pos = p1.style.top
     }
-    if (p1DownPressed==='true' && parseInt(p1.style.top)>= 4+(boardLength/2 -paddleLength/2)) {
+    if (p1DownPressed==='true' && parseInt(p1.style.top)>= 2+(boardLength/2 -paddleLength/2)) {
         p1.style.top = "166px"
         vertp1Pos = p1.style.top
     }
@@ -178,7 +178,7 @@ function drawPaddles() {
         vertp2Pos = p2.style.top
     }
     if (p2DownPressed==='true' && parseInt(p2.style.top)>=(boardLength/2 -paddleLength/2)) {
-        p2.style.top = "162px"
+        p2.style.top = "166px"
         vertp2Pos = p2.style.top
     }
 }
